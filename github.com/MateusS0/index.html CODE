@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="top-bar">
+      <button id="historyBtn">↶</button>
+      <span id="dateIndicator">May 14</span>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="chatBox" placeholder="What's up?" />
+    </div>
+
+    <div class="common-bar">
+      <!-- Suggestions will go here -->
+    </div>
+
+    <div class="missions">
+      <!-- Example Mission -->
+      <div class="mission">
+        <div class="progress-circle purple"></div>
+        <span>4L water</span>
+      </div>
+
+      <!-- Sub-mission -->
+      <div class="sub-mission">
+        <div class="progress-circle green filled"></div>
+        <span>1L morning water</span>
+      </div>
+    </div>
+
+    <!-- Mission Accomplished Popup (hidden by default) -->
+    <div id="accomplishedPopup">🎉 Mission Accomplished!</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
