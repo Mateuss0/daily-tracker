@@ -1,0 +1,28 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const chatBox = document.getElementById("chatBox");
+  const missionsContainer = document.querySelector(".missions");
+  const popup = document.getElementById("accomplishedPopup");
+
+  chatBox.addEventListener("keypress", function (e) {
+    if (e.key === "Enter" && chatBox.value.trim() !== "") {
+      addMission(chatBox.value);
+      chatBox.value = "";
+    }
+  });
+
+  function addMission(text) {
+    const missionEl = document.createElement("div");
+    missionEl.className = "mission";
+    missionEl.innerHTML = `
+      <div class="progress-circle purple"></div>
+      <span>${text}</span>
+    `;
+    missionsContainer.appendChild(missionEl);
+  }
+
+  // Dummy: Show popup after 5s just for demo
+  setTimeout(() => {
+    popup.style.display = "block";
+    setTimeout(() => (popup.style.display = "none"), 3000);
+  }, 5000);
+});
